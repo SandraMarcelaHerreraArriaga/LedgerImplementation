@@ -1,0 +1,10 @@
+grammar TRANSACTION
+
+transaction  <-  Date Esp Description? NL SepPlus CompletePosting (SepPlus Posting)+
+Year <- Dig Dig Dig Dig
+Month <- '0' [1-9] / '1' [0-2]
+Day <- '0' [1-9] / [1-2] [0-9] / '3' [0-1]
+Date <- Year '-' Month ('-' Day)?
+Num <- [0-9]
+
+
